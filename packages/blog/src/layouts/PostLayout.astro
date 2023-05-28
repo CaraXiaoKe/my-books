@@ -1,5 +1,7 @@
 ---
 import '../styles/reset.css'
+const { frontmatter } = Astro.props
+const  title = frontmatter?.title || Astro.props.title
 ---
 <html lang="en">
   <head>
@@ -10,17 +12,28 @@ import '../styles/reset.css'
     <nav>
       <div class="nav-left">
         <a href="/">主页</a>
-        <a href="/posts">文章</a>
+        <a href="/posts">文章列表</a>
       </div>
     </nav>
-    <article>
-      <slot /> 
-    </article>
+    <div class="con">
+      <h1 class="title">{title}</h1>
+      <article>
+        <slot /> 
+      </article>
+    </div>
   </body>
 </html>
 <style lang="scss">
+  :root {
+    --max-width: 1010px;
+  }
+  .title {
+    font-size: 24px;
+  }
   nav { 
     --line-height: 60px;
+    max-width: var(--max-width);
+    margin: 0 auto;
     a {
       float: left;
       color: #222;
@@ -29,11 +42,23 @@ import '../styles/reset.css'
       padding: 0 10px;
     }
   }
+  .con {
+    box-sizing: border-box;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 4px #eee;
+    font-size: 16px;
+  }
+  .title {
+    text-align: center;
+    font-size: 26px;
+  }
+  nav a:first-child {
+    margin-left: -10px;
+  }
   .nav-left {
     height: var(--line-height);
-    margin-left: 20px
-  }
-  article {
-
   }
 </style>

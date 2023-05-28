@@ -10,13 +10,22 @@ const mdPosts: Array<{
 const posts = astroPosts.concat(mdPosts)
 ---
 <PostLayout>
-  <h1>文章列表</h1>
   <ol>
     {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
   </ol>
 </PostLayout>
-<style>
-  h1 {
-    color: orange;
+<style lang="scss">
+  ol {
+    font-size: 20px;
+    li {
+      line-height: 1.5;
+       a {
+        color: #333;
+        &:hover {
+          color: red;
+        }
+       }
+    }
   }
+  
 </style>
