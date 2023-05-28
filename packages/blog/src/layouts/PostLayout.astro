@@ -1,0 +1,39 @@
+---
+import '../styles/reset.css'
+---
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/">主页</a>
+        <a href="/posts">文章</a>
+      </div>
+    </nav>
+    <article>
+      <slot /> 
+    </article>
+  </body>
+</html>
+<style lang="scss">
+  nav { 
+    --line-height: 60px;
+    a {
+      float: left;
+      color: #222;
+      font-size: 18px;
+      line-height: var(--line-height);
+      padding: 0 10px;
+    }
+  }
+  .nav-left {
+    height: var(--line-height);
+    margin-left: 20px
+  }
+  article {
+
+  }
+</style>

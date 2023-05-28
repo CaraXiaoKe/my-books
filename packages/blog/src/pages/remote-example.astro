@@ -1,0 +1,11 @@
+---
+// 示例：从远程 API 请求 Markdown
+// 并且在运行时渲染为 HTML
+// 使用 "marked" (https://github.com/markedjs/marked)
+
+import { marked } from 'marked';
+const response = await fetch('https://raw.githubusercontent.com/wiki/adam-p/markdown-here/Markdown-Cheatsheet.md');
+const markdown = await response.text();
+const content = marked.parse(markdown);
+---
+<article set:html={content} />
