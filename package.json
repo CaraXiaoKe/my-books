@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/CaraXiaoKe/my-books/issues"
   },
-  "homepage": "https://github.com/CaraXiaoKe/my-books#readme"
+  "homepage": "https://github.com/CaraXiaoKe/my-books#readme",
+  "dependencies": {
+    "@types/node": "^20.2.5"
+  }
 }

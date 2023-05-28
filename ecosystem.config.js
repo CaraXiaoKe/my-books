@@ -3,8 +3,8 @@ module.exports = {
       {
         name: 'blog',
         cwd : "./packages/blog",
-        script: 'yarn build && node ./dist/server/entry.mjs',
-        watch: './packages/blog'
+        script: 'yarn install && yarn build && node ./dist/server/entry.mjs',
+        // watch: '.' // 不起作用
       }
     ],
     deploy : {
