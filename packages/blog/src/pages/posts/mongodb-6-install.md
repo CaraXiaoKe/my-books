@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: 'ubuntu20.04 mongodb 6.0 安装'
 ---
 
-1.下载mongodb公钥
+1.下载mongodb公钥1
 
 ```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
