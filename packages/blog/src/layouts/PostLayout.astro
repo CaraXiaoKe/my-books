@@ -27,9 +27,6 @@ const  title = frontmatter?.title || Astro.props.title
   :root {
     --max-width: 1010px;
   }
-  .title {
-    font-size: 24px;
-  }
   nav { 
     --line-height: 60px;
     max-width: var(--max-width);
@@ -37,10 +34,13 @@ const  title = frontmatter?.title || Astro.props.title
     a {
       float: left;
       color: #222;
-      font-size: 18px;
+      font-size: 16px;
       line-height: var(--line-height);
       padding: 0 10px;
     }
+  }
+  .nav-left {
+    height: var(--line-height);
   }
   .con {
     box-sizing: border-box;
@@ -53,12 +53,9 @@ const  title = frontmatter?.title || Astro.props.title
   }
   .title {
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
   }
   nav a:first-child {
     margin-left: -10px;
-  }
-  .nav-left {
-    height: var(--line-height);
   }
 </style>
