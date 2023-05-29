@@ -1,0 +1,30 @@
+---
+import PostLayout from '../../layouts/PostLayout.astro'
+const posts: Array<{
+    frontmatter: {
+      title: string,
+    },
+    url: string,
+  }> = await Astro.glob('./playwright/*.md')
+---
+<PostLayout>
+  <ol>
+    {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ol>
+</PostLayout>
+<style lang="scss">
+  ol {
+    font-size: 20px;
+    li {
+      line-height: 1.2;
+      padding: 5px 0;
+       a {
+        color: #333;
+        &:hover {
+          color: red;
+        }
+       }
+    }
+  }
+  
+</style>
