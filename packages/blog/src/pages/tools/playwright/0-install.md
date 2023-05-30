@@ -18,16 +18,22 @@ npx playwright install chromium
 可通过npx playwright install --help查看支持安装浏览器列表
 
 3.运行
+
 后台运行
-```
+```bash
 npx playwright test
 ```
 UI可视化运行
-```
+```bash
 npx playwright test --ui
+```
+用例录制
+```bash
+npx playwright codegen http://demo.playwright.dev/todomvc
 ```
 
 参考链接：
 - [Playright安装](https://playwright.dev/docs/intro)
 - [Playright安装指定浏览器](https://playwright.dev/docs/browsers#install-browsers)
+- [Playright用例录制](https://playwright.dev/docs/codegen#recording-a-test)
 
