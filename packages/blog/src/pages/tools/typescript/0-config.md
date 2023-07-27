@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/PostLayout.astro
-title: 'typescript配置'
+title: 'TypeScript配置'
 ---
 
 ### 1.项目安装typescript（版本5.1.4）
@@ -129,7 +129,9 @@ npx tsc --init
 ```
 ### 3.ts文件编译
 
-1）创建src/index.ts文件(commonjs)
+#### 示例1
+
+创建src/index.ts文件(commonjs)
 ```typescript
 const c: any = 1
 function main(){
@@ -137,11 +139,7 @@ function main(){
 }
 module.exports =  main
 ```
-执行tsc命令
-```
-npx tsc
-```
-输出结果
+执行tsc命令`npx tsc`，输出结果如下
 ```javascript
 "use strict";
 const c = 1;
@@ -152,7 +150,9 @@ module.exports = main;
 
 ```
 
-2）创建src/index-1.ts文件(ESM)
+示例2.
+
+创建src/index-1.ts文件(ESM)
 ```typescript
 const c: any = 1
 function main(){
@@ -160,11 +160,7 @@ function main(){
 }
 export default  main
 ```
-执行tsc命令
-```
-npx tsc
-```
-输出结果
+执行命令 `npx tsc`，输出结果如下
 ```javascript
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -175,7 +171,7 @@ function main() {
 exports.default = main;
 
 ```
-配置`noUnusedLocals:true`，在ESM模式下，会提示以下错误
+配置compilerOptions参数配置`noUnusedLocals:true`，在ESM模式下，会提示以下错误
 
 ```shell
 error TS6133: 'c' is declared but its value is never read.
@@ -183,30 +179,31 @@ error TS6133: 'c' is declared but its value is never read.
         ~
 Found 1 error. Watching for file changes.
 ```
-在commonjs模式则正常
-
+在commonjs模式则正常，分析可得对于部分语法规则只会在ESM模式下生效
 
 ### 4.tsconfig.json
+
+配置项解读
+- compilerOptions.noEmit 设置true，只检查不构建出文件，亦可通过命令函参数配置如npx tsc --noEmit
+- noEmitOnError 设置true，出现错误时不构建出文件
+- files：配置编译的文件，未配置时默认编译tsconfig.json所在目录下的所有.ts文件，配置了files之后只限制编译指定路径的文件
+- include: 编译符合正则目录下的ts文件，和files项为并集
+- exclude: 从include中排除掉符合正则目录下的ts文件不编译，files配置则不受该影响
+
 ```json
 {
   "compilerOptions": {
     // 几个实用的配置项
-    "noEmit": true, // 设置true，只检查不构建出文件，亦可通过命令函参数配置如npx tsc --noEmit
-    "noEmitOnError": true // 设置true，出现错误时不构建出文件
+    "noEmit": true,
+    "noEmitOnError": true 
   },
-  // 配置编译的文件，未配置时默认编译tsconfig.json所在目录下的所有.ts文件，配置了files之后只限制编译指定路径的文件
   "files": [
     "src/index-1.ts"
   ],
-  // 编译符合正则目录下的ts文件，和files项为并集
   "include": ["main/**/*"],
-  // 从include中排除掉符合正则目录下的ts文件不编译，files配置则不受该影响
   "exclude": ["src/index-1.ts"]
 }
 ```
-
-
-
 
 参考链接：
 - [TypeScript中文网](https://ts.nodejs.cn/docs/handbook/tsconfig-json.html)
