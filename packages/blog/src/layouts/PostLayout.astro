@@ -24,6 +24,9 @@ const  title = frontmatter?.title || Astro.props.title
         <slot /> 
       </article>
     </div>
+    <footer>
+      备案号 <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备17017454号-1</a>
+    </footer>
   </body>
 </html>
 <style lang="scss">
@@ -53,6 +56,7 @@ const  title = frontmatter?.title || Astro.props.title
     border: 1px solid #eee;
     box-shadow: 0 0 4px #eee;
     font-size: 16px;
+    min-height: calc(100vh - 100px);
   }
   .title {
     text-align: center;
@@ -60,5 +64,9 @@ const  title = frontmatter?.title || Astro.props.title
   }
   nav a:first-child {
     margin-left: -10px;
+  }
+  footer {
+    line-height: 40px;
+    text-align: center;
   }
 </style>
