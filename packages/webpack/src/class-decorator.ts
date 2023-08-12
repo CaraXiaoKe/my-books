@@ -1,18 +1,21 @@
-function testOne(target: any){
-  target.prototype.getName = function(){
-
-  }
-  return target
+function readOnly(target: any, name: any){
+  // let __value: any
+  // let isInit = false
+  // return {
+  //   configurable: false,
+  //   enumerable: true,
+  //   get: function(){
+  //     return __value
+  //   },
+  //   set: function(value: any){
+  //     if(value !== void 0 && !isInit){
+  //       __value = value
+  //       isInit = true
+  //     }
+  //   }
+  // }
 }
-function testTwo(target: any){
-  target.prototype.getName = function(){
-
-  }
-  console.log(target)
-}
-
-@testOne
-@testTwo
 class Animal {
-  
+  @readOnly
+  name: any = 11
 }

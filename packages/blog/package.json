@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/CaraXiaoKe/my-books#readme",
   "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
     "@astrojs/node": "^5.1.4",
     "astro": "^2.5.5",
     "marked": "4.3.0",

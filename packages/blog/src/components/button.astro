@@ -1,0 +1,27 @@
+---
+const { id } = Astro.props
+---
+<button id={id}>
+  <slot />
+</button>
+<script>
+  console.log('你好，浏览器控制台！');
+</script>
+<style>
+  button {
+    height: 32px;
+    line-height: 30px;
+    padding: 0 11px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    outline: 0;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: rgb(255, 209, 0);
+    border-color: rgb(255, 209, 0);
+    color: #222;
+  }
+</style>

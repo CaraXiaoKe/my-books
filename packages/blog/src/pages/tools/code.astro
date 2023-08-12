@@ -5,13 +5,13 @@ const posts: Array<{
       title: string,
     },
     url: string,
-  }> = await Astro.glob('./typescript/*.md')
+  }> = await Astro.glob('./code/*.mdx')
 ---
 <PostLayout>
   <ol>
     {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
   </ol>
-</PostLayout>
+</PostLayout> 
 <style lang="scss">
   ol {
     font-size: 20px;

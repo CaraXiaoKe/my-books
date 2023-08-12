@@ -3,6 +3,8 @@ html, body {
   margin: 0;
 }
 body {
+  white-space: normal;
+  word-wrap: break-word;
   padding: 
     calc(env(safe-area-inset-top)) 
     calc(20px + env(safe-area-inset-right)) 
