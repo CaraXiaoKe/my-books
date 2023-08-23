@@ -4,7 +4,11 @@ module.exports = {
       name: 'blog',
       cwd : "./packages/blog",
       script: 'yarn install && yarn build && node ./dist/server/entry.mjs',
-      // watch: '.' // 不起作用
+    },
+    {
+      name: 'games',
+      cwd : "./packages/games",
+      script: 'yarn install && node app.js',
     }
   ],
   deploy : {

@@ -1,0 +1,60 @@
+exports.poetryList = [
+  // {
+  //   name: 'yonge',
+  //   url: 'https://static.92node.com/images/00030-77018272-0000.png',
+  //   answer: ['qxxtg', 'bmfls'],
+  //   answerLength: 5,
+  //   options: ['k', 'q', 'c', 'l', 'r', 'x', 't', 'u', 'a', 'y', 'p', 'h', 'g', 'm', 'b', 'f', 's', 'd'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['唐·骆宾王'],
+  // },
+  // {
+  //   name: 'jingyesi',
+  //   url: 'https://static.92node.com/images/00055-723262434-0000.png',
+  //   answer: ['cqmyg', 'jtwmy'],
+  //   options: ['v', 'b', 'r', 'z', 'e', 'i', 'w', 't', 'j', 'g', 'y', 'n', 'p', 'm', 'q', 'c', 'k', 'd'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['唐代', "诗仙", "李白"],
+  // },
+  // {
+  //   name: 'cailian',
+  //   url: 'https://static.92node.com/images/20230814233340.jpg',
+  //   answer: ['lyhtt', 'yxlyj', 'yxlyd'],
+  //   options: ['u', 't', 'j', 'l', 'i', 'y', 'o', 'q', 'b', 'm', 'r', 'k', 'h', 'w', 'f', 'x', 'd', 'c'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['汉乐府〔两汉〕', '这是一首采莲歌，反映了采莲时的光景和采莲人欢乐的心情。在汉乐府民歌中具有独特的风味'],
+  // },
+  // {
+  //   name: 'shanxing',
+  //   url: 'https://static.92node.com/images/00073-171279481-0000.png',
+  //   answer: ['yshssjx', 'tczaflw', 'syhyeyh'],
+  //   answerLength: 7,
+  //   options: ['x', 'f', 'l', 'y', 's', 'o', 'c', 'j', 'b', 'z', 'w', 'h', 't', 'q', 'a', 'v', 'n', 'e'].sort((a, b) => a < b ? -1 : 1),
+  //   tipTime: [3000],
+  //   tips: [
+  //     '这是一首描写和赞美深秋山林景色的七言绝句。这首诗描绘的是秋之色，展现出一幅动人的山林秋色图，山路、人家、白云、红叶，构成一幅和谐统一的画面', 
+  //     "唐·杜牧"
+  //   ],
+  // },
+  // {
+  //   name: 'tianjingshaqiusi',
+  //   url: 'https://s1.imagehub.cc/images/2023/08/13/20230813135908.png',
+  //   answer: ['ktlshy','xqlsrj'],
+  //   answerLength: 6,
+  //   options: ['t', 'v', 's', 'y', 'i', 'j', 'p', 'w', 'l', 'g', 'h', 'k', 'r', 'e', 'x', 'z', 'n', 'q'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['元代诗词', "诗人马致远"],
+  // },
+  // {
+  //   name: 'chuzhouxijian',
+  //   url: 'https://static.92node.com/images/00070-3628724876-0000.png',
+  //   answer: ['ydwrzzh'],
+  //   answerLength: 7,
+  //   options:  ['y', 'j', 'a', 'd', 'l', 'x', 'k', 'h', 'g', 'c', 'r', 'z', 's', 'w', 't', 'f', 'q', 'b'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['滁州西涧'],
+  // },
+  // {
+  //   name: 'bochuanguazhou',
+  //   url: 'https://static.92node.com/images/00064-1900065033-0000.png',
+  //   answer: ['jkgzysj','zszgscs'],
+  //   answerLength: 7,
+  //   options: ['l', 'w', 'x', 'j', 'u', 'o', 'f', 's', 'b', 'd', 'c', 'k', 'e', 'v', 'y', 'z', 't', 'g'].sort((a, b) => a < b ? -1 : 1),
+  //   tips: ['王安石', "泊船瓜洲"],
+  // },
+]
