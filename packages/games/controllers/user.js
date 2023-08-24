@@ -11,7 +11,6 @@ module.exports.updateUser = async (request) => {
       const result = await userModel.updateOne({
         accessToken,
       }, body)
-      console.log(accessToken, result, body)
       return {
         ok: true,
         data: null,
@@ -63,7 +62,7 @@ module.exports.login = async (request) => {
   const nonce = crypto.randomBytes(16).toString('hex') + result.openid
   const accessToken = crypto.createHash('md5').update(nonce).digest('hex')
   try{
-    await userModel.updateOne({
+    const data = await userModel.findOneAndUpdate({
       openid: result.openid,
     },{
       openid: result.openid,
@@ -72,12 +71,11 @@ module.exports.login = async (request) => {
     }, {
       upsert: true
     })
-  }catch(err){
+  } catch(err) {
     console.log(err)
   }
   return {
     ok: true,
     accessToken,
-    result,
   }
 }

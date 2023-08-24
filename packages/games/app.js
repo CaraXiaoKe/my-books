@@ -18,7 +18,8 @@ const start = async () => {
   try {
     await db().catch(err => console.log(err))
     await fastify.listen({
-      port: 3000
+      port: 3000,
+      host: '0.0.0.0',
     })
   } catch (err) {
     fastify.log.error(err)
