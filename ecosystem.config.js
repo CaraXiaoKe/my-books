@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'blog',
       cwd : "./packages/blog",
-      script: 'yarn install && yarn build && node ./dist/server/entry.mjs',
+      script: 'yarn install && yarn build && HOST=0.0.0.0 node ./dist/server/entry.mjs',
     },
     {
       name: 'games',
